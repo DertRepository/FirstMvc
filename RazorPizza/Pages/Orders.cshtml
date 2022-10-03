@@ -3,4 +3,29 @@
 @{
 }
 
-<h1>Views Order</h1>
+<h3>Order Pizza</h3>
+
+
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>PRICE</th>
+            <th>COMMENT</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var order in Model.PizzaOrders)
+        {
+            <tr>
+               <td>@order.Id</td>
+               <td>@order.Name</td>
+               <td>@order.BasePrice</td>
+               <td>@order.Favorite</td>
+            </tr>
+        }
+
+    </tbody>
+</table>

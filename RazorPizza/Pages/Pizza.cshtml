@@ -22,7 +22,7 @@
                             <h3 style="text-align:left;">Create your own Pizza</h3>
                             <p style="text-align: left;">Make your own Pizza with our pizza maker</p>
                             <a class="btn btn-outline-primary" style="float:left;" asp-area="" asp-page="Forms/Custom">
-                                Bring Pizza    
+                                Try it on    
                             </a>
                         </div>
                     </div>
@@ -32,13 +32,13 @@
                 {
                     var pathImg = $"~/images/Pizzas/{item.ImgTitle}.png";
                     <div class="col-4 mb-5">
-                        <img src=@pathImg class="w-100" asp-append-version="true"/>
-                        <a class="btn btn-primary mt-1" asp-area=""  asp-page="Checkouts/Check"
+
+                    <a class="pizza-Img" asp-area=" " asp-page="Checkouts/Check"
                             asp-route-Name = "@item.Name"
                             asp-route-PizzaPrice = "@item.FinalPrice"
                             asp-route-ImgTitle = "@item.ImgTitle"
-                            asp-route-Favorite = "@item.Favorite"> 
-                                Get this Pizza
+                            asp-route-Favorite = "@item.Favorite">
+                            <img src=@pathImg class="w-100" asp-append-version="true" />
                         </a>
                     </div> 
                 }   

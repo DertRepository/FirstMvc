@@ -28,6 +28,10 @@ namespace RazorPizza.Pages.Checkouts
             {
                 ImgTitle = "Create";
             }
+            if (string.IsNullOrWhiteSpace(Favorite))
+            {
+                Favorite = "Hmm i just thinking";
+            }
 
             PizzaOrder pizzaOrder = new PizzaOrder();
             pizzaOrder.Name = Name;
