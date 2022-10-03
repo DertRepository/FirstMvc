@@ -1,0 +1,38 @@
+﻿@model User;
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Create Authentication</h1>
+
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>Create User</h4>
+            </div>
+            <div class="card-body">
+                <form asp-controller="User" asp-action="CreateUser" method="post">
+                    <div class="mb-2">
+                        <label>ID</label>
+                        <input asp-for=Id type="text" class="form-control" />
+                    </div>
+                    <div class="mb-2">
+                        <label>UserName</label>
+                        <input asp-for=Name type="text" class="form-control" />
+                    </div>
+                    <div class="mb-2">
+
+                        <label>Password</label>
+                        <input asp-for=Password type="password" class="form-control" />
+                    </div>
+                    <button class="btn btn-primary" type="submit">ADD</button>
+                </form>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+</div>
