@@ -9,6 +9,7 @@ namespace RazorPizza.Pages.Forms
         [BindProperty]
         public PizzasModel? Pizza { get; set; }
         public float PizzaPrice { get; set; }
+        public string Favorite { get; set; }
         public void OnGet()
         {
         }
@@ -25,7 +26,9 @@ namespace RazorPizza.Pages.Forms
             if (Pizza.Mushroom) PizzaPrice += 1;
             if (Pizza.Pineapple) PizzaPrice += 10;
 
-            return RedirectToPage("/Checkouts/Check", new {Pizza.Name,PizzaPrice});
+            Favorite = Pizza.Favorite;
+
+            return RedirectToPage("/Checkouts/Check", new {Pizza.Name,PizzaPrice,Favorite});
         }
     }
 }

@@ -9,6 +9,7 @@ namespace RazorPizza.Pages.Checkouts
         public string Name { get; set; }
         public float PizzaPrice { get; set; }
         public string ImgTitle { get; set; }
+        public string Favorite { get; set; }
         public void OnGet()
         {
             if (string.IsNullOrWhiteSpace(Name))
