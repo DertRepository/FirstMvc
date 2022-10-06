@@ -1,0 +1,30 @@
+﻿@page "/converter"
+
+<PageTitle>@Title</PageTitle>
+
+<input type="number" @bind-value=@Kilos @bind-value:event="oninput" />Kilos
+<br />
+<input type="number" @bind-value=@Grams @bind-value:event="oninput"/>G
+
+@code {
+    private string Title = "Converter Binding";
+    private double kilos = 1;
+    private double grams = 1000;
+
+    public double Kilos {
+        get { return kilos; }
+        set {
+            kilos = value;
+            grams = value * 1000;
+        } 
+    }
+    public double Grams
+    {
+        get { return grams; }
+        set
+        {
+            grams = value;
+            kilos = value / 1000;
+        }
+    }
+}
