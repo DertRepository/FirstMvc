@@ -1,5 +1,7 @@
 ﻿.header {
     grid-area: hd;
+    display:flex;
+    flex-direction:column;
     background-color: #227093;
     color: white;
     padding: 2%;
